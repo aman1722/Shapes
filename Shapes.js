@@ -6,10 +6,13 @@ class Rectangle{
         this.width = width;
     }
 
-    validatePositiveNumber(number, paramName) {
+    validatePositiveNumber(number) {
         if (typeof number !== 'number' || number <= 0) {
             throw new Error(`Length and width must be positive numbers`);
         }
+    }
+    calculateArea() {
+        return this.length * this.width;
     }
 }
 
