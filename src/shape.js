@@ -61,7 +61,9 @@ class Circle{
        this.radius = radius;
     }
 
-    
+    area() {
+        return Math.floor(Math.PI * Math.pow(this.radius, 2));
+    }
 
     validatePositiveNumber(number){
         if (typeof number !== 'number' || number <= 0) {

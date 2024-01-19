@@ -47,5 +47,12 @@ describe('Triangle', () => {
 describe('Circle',()=>{
     test('circle will not created with negative radius',()=>{
         expect(()=> new Circle(-5)).toThrow('Circle can not create with negative radius.')
-    })
+    });
+
+    test('If radius is 7 area will be 153',()=>{
+        const circle = new Circle(7);
+        expect(circle.area()).toBe(153)
+    });
+
+    
 })
