@@ -6,15 +6,20 @@ class Rectangle{
         this.width = width;
     }
 
+    // validate  
     validatePositiveNumber(number) {
         if (typeof number !== 'number' || number <= 0) {
             throw new Error(`Length and width must be positive numbers`);
         }
     }
-    calculateArea() {
+
+    //Calculating area 
+    area() {
         return this.length * this.width;
     }
-    calculateCircumference() {
+
+    //Calculating circumference 
+    circumference() {
         return 2 * (this.length + this.width);
     }
 }
@@ -40,17 +45,33 @@ class Triangle {
         }
     }
 
-    calculateArea() {
+    area() {
         return 0.5 * this.base * this.height;
     }
 
-    calculateCircumference() {
+    circumference() {
         return this.side1 + this.side2 + this.side3;
     }
 }
 
 
+class Circle{
+    constructor(radius){
+       this.validatePositiveNumber(radius);
+       this.radius = radius;
+    }
+
+    
+
+    validatePositiveNumber(number){
+        if (typeof number !== 'number' || number <= 0) {
+            throw new Error(`Circle can not create with negative radius.`);
+        } 
+    }
+}
+
 module.exports={
     Rectangle,
-    Triangle
+    Triangle,
+    Circle
 }

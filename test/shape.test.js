@@ -1,4 +1,5 @@
-const { Rectangle, Triangle } = require("./Shapes");
+
+const { Rectangle, Triangle, Circle } = require("../src/shape");
 
 
 describe('Rectangle', () => {
@@ -11,18 +12,18 @@ describe('Rectangle', () => {
 
     test('calculateArea should return the correct value for positive parameters', () => {
         const rectangle = new Rectangle(5, 8);
-        expect(rectangle.calculateArea()).toBe(40);
+        expect(rectangle.area()).toBe(40);
     });
 
     test('calculateCircumference should return the correct value for positive parameters', () => {
         const rectangle = new Rectangle(5, 8);
-        expect(rectangle.calculateCircumference()).toBe(26);
+        expect(rectangle.circumference()).toBe(26);
     });
 });
 
 
 describe('Triangle', () => {
-    test('Code should throw an error for non-positive parameters', () => {
+    test(' non-positive parameters', () => {
         expect(() => new Triangle(-3, 4, 5, 5, 4)).toThrow('All dimensions must be positive numbers');
         expect(() => new Triangle(3, -4, 5, 5, 4)).toThrow('All dimensions must be positive numbers');
         expect(() => new Triangle(3, 4, -5, 5, 4)).toThrow('All dimensions must be positive numbers');
@@ -33,11 +34,18 @@ describe('Triangle', () => {
 
     test('calculateArea should return the correct value for positive parameters', () => {
         const triangle = new Triangle(3, 4, 5, 5, 4);
-        expect(triangle.calculateArea()).toBe(6);
+        expect(triangle.area()).toBe(6);
     });
 
     test('calculateCircumference should return the correct value for positive parameters', () => {
         const triangle = new Triangle(3, 4, 5, 5, 4);
-        expect(triangle.calculateCircumference()).toBe(14);
+        expect(triangle.circumference()).toBe(14);
     });
 });
+
+
+describe('Circle',()=>{
+    test('circle will not created with negative radius',()=>{
+        expect(()=> new Circle(-5)).toThrow('Circle can not create with negative radius.')
+    })
+})
