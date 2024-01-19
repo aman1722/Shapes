@@ -13,4 +13,9 @@ describe('Rectangle', () => {
         const rectangle = new Rectangle(5, 8);
         expect(rectangle.calculateArea()).toBe(40);
     });
+    
+    test('calculateCircumference should return the correct value for positive parameters', () => {
+        const rectangle = new Rectangle(5, 8);
+        expect(rectangle.calculateCircumference()).toBe(26);
+    });
 });

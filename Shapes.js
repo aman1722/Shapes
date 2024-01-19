@@ -14,6 +14,9 @@ class Rectangle{
     calculateArea() {
         return this.length * this.width;
     }
+    calculateCircumference() {
+        return 2 * (this.length + this.width);
+    }
 }
 
 
