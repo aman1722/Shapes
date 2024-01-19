@@ -1,0 +1,26 @@
+{
+  "name": "shapes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "Shapes.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aman1722/Shapes.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aman1722/Shapes/issues"
+  },
+  "homepage": "https://github.com/aman1722/Shapes#readme",
+  "dependencies": {
+    "jest": "^29.7.0"
+  }
+}
