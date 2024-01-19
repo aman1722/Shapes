@@ -1,7 +1,7 @@
 class Rectangle{
     constructor(length, width) {
-        this.validatePositiveNumber(length, 'Length');
-        this.validatePositiveNumber(width, 'Width');
+        this.validatePositiveNumber(length);
+        this.validatePositiveNumber(width);
         this.length = length;
         this.width = width;
     }
